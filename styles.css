@@ -1,0 +1,384 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Body Background */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navBar {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    background-color: #000;
+    color: #FFF
+}
+
+/* Navigation Text on NavBar */
+.brand-title {
+    margin: 0 5px;
+    padding-right: 35px;
+    color: #FFF;
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.brand-title:hover {
+    color: #FFF;
+}
+
+.navBar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navBar-links li {
+    list-style: none;
+}
+
+.navBar-links li a {
+    color: #EEE;
+    display: flex;
+    padding: 1rem;
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-decoration: none;
+    transition: 0.6s ease-in-out;
+}
+
+.navBar-links li a:hover {
+    transform: translateY(5%);
+    color: #111;
+    background-color: #CCC;
+    border-top: 1pt solid grey;
+}
+
+
+/* Creating Hamburger Menu */
+.toggle-button {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 35px;
+    top: 1.15rem;
+    right: 0.65rem;
+}
+
+.toggle-button .bar {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Media Query for Mobile Hamburger Menu (Responsive) */
+@media (max-width: 950px) {
+    .toggle-button {
+        display: flex;
+
+    }
+    .navBar-links {
+        width: 100%;
+        display: none;
+    }
+
+    .navBar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navBar-links ul {
+        width: 100%;
+        flex-direction: column;
+
+    }
+    .navBar-links li {
+        text-align: center;
+        border-bottom: 1pt solid #252525;
+    }
+
+    .navBar-links li a{
+        padding: .5rem 0.5rem;
+    }
+    .navBar-links.active {
+        display: flex;
+    }
+}
+
+/* Search Bar */
+.search-container {
+    padding-right: 10px;
+    position: fixed;
+    right: 0;
+}
+
+.searchbar {
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.searchbar input{
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    font-weight: 100;
+    color: #EEE;
+}
+
+::placeholder {
+    color: #EEE;
+}
+
+.searchimg {
+    margin: 1px 5px;
+    width: 15px;
+}
+
+.searchbar button {
+    border: 0;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background: #EEE;
+}
+
+/* Media Query for Search Bar */
+@media (max-width:1175px){
+    .search-container {
+        display: none;
+    }
+}
+
+
+/* Scroll Animation Effects */
+.hiddenTop {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(-100%);
+    transition: 0.7s ease-in;
+}
+
+.hiddenLeft {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-100%);
+    transition: 0.7s ease-out;
+}
+
+.hiddenRight {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(100%);
+    transition: 0.7s ease-out;
+}
+
+.hiddenBottom {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(100%);
+    transition: 0.7s ease-in;
+}
+
+.show {
+    transform: translateX(0);
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+}
+
+
+/* Home Page */
+/* Page Title */
+.title {
+    display: block;
+    position: relative;
+    padding-top: 50px;
+    font-size: 72px;
+    font-weight: 100;
+    color: #FFF;
+    text-align: center;
+}
+
+.title-portfolio {
+    display: block;
+    position: relative;
+    padding-top: 50px;
+    font-size: 72px;
+    font-weight: 100;
+    color: #FFF;
+    text-align: center;
+}
+@media (max-width: 400px) {
+    .title {
+        font-size: 56px;
+    }
+}
+
+/* Content */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.name {
+    color: #EEE;
+    width: 100%;
+    font-size: 48px;
+    font-weight: 650;
+}
+
+.bio {
+    color: #DDD;
+    width: 100%;
+    font-size: 32px;
+    font-weight: 450;
+    margin-bottom: 10px;
+    padding-top: 0;
+}
+
+.about-content {
+    width: 50%;
+    color: #EEE;
+    font-size: 15px;
+    font-weight: 350;
+}
+
+@media (max-width: 415px) {
+    .title {
+        padding-bottom: 0;
+    }
+    .about-section {
+        transform: scale(85%);
+    }
+
+}
+
+/* Footer/Socials */
+
+.footer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 276px;
+    /* margin-top: 287px; */
+}
+
+.socials a{
+    text-decoration: none;
+}
+
+.socials {
+    background-color: #222;
+    display: flex;
+    margin: 10px;
+    border-radius: 10px;
+    border: 3px solid #EEE;
+}
+
+.fa-brands {
+    background-color: #000;
+    color: white;
+    width: 55px;
+    height: 55px;
+    line-height: 58px;
+    margin: 10px 10px 5px;
+    border-radius: 75px;
+    border: 1px solid white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.socials a .fa-brands:hover {
+    transform:translateY(10%);
+}
+
+@media (max-width: 500px) {
+    .socials {
+        flex-direction: column;
+    }
+}
+
+/* Scenery Page */
+/* Photo Gallery with Text */
+.image-section {
+    margin: auto;
+    width: 85%;
+    grid-gap: 20px;
+}
+
+.photo img {
+    width: 65%;
+    border-radius: 10px;
+}
+
+.photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+    transform: scale(0.75);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.photo:hover {
+    transform: scale(0.85);
+}
+
+.photo .content {
+    color: #CCC;
+    font-weight: 500;
+    width: 50%;
+}
+
+@media (max-width: 850px) {
+    .photo .content {
+        font-size: 12px;
+        width: 75%
+    }
+}
+
+/* Portfolio Page */
+/* CS50 Table */
+table {
+    background-color: black;
+    width: 70%;
+    margin: 50px;
+    align-self: center;
+    text-align: left;
+    border: 1px solid white;
+}
+
+th, td {
+    padding: 25px;
+    color: white;
+    font-size: 22px;
+    border: 1px solid white;
+}
+
+.overview {
+    font-size: 20px;
+}
