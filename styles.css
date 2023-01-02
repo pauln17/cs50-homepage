@@ -273,6 +273,31 @@ body {
 
 }
 
+/* Arrow Animation */
+.arrow-container {
+    position: relative;
+    top: 240px;
+    text-align: center;
+}
+
+.fa-angles-down {
+    color: white;
+    padding: 5px 10px 5px;
+    border: 3px solid white;
+    border-radius: 25%;
+    animation: bounce 1s infinite ease-out alternate;
+
+}
+
+@keyframes bounce {
+    0 {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-25%);
+    }
+}
+
 /* Footer/Socials */
 
 .footer {
@@ -280,7 +305,7 @@ body {
     position: relative;
     justify-content: center;
     align-items: center;
-    top: 276px;
+    top: 225px;
     /* margin-top: 287px; */
 }
 
@@ -382,3 +407,4 @@ th, td {
 .overview {
     font-size: 20px;
 }
+
