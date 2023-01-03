@@ -11,6 +11,14 @@ body {
     padding: 0;
 }
 
+.background {
+    background-image: url('blob-scatter.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60rem;
+}
+
 /* Navigation Bar */
 .navBar {
     display: flex;
