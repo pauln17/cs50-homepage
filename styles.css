@@ -206,6 +206,7 @@ body {
 /* Home Page */
 /* Page Title */
 .title {
+
     display: block;
     position: relative;
     padding-top: 50px;
@@ -276,25 +277,38 @@ body {
 /* Arrow Animation */
 .arrow-container {
     position: relative;
-    top: 240px;
+    top: 45px;
     text-align: center;
 }
 
-.fa-angles-down {
+.arrow-container h1 {
     color: white;
+    font-size: 25px;
+    font-weight: 350;
+    margin: 50px;
+}
+.fa-angles-down {
+    color: #EEE;
     padding: 5px 10px 5px;
-    border: 3px solid white;
-    border-radius: 25%;
-    animation: bounce 1s infinite ease-out alternate;
+    border: 3px solid #EEE;
+    border-radius: 35%;
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 1);
+    transition: box-shadow 1s linear, rotate 3s linear;
+    animation: bounce 0.4s infinite ease-out alternate;
+}
 
+.fa-angles-down:hover {
+
+    box-shadow: 2px 2px 250px 200px rgba(255, 255, 255, 0.5);
+    justify-content: center;
 }
 
 @keyframes bounce {
-    0 {
-        transform: translateY(0);
+    0% {
+        translate: 0 0;
     }
     100% {
-        transform: translateY(-25%);
+        translate: 0 -25%;
     }
 }
 
@@ -305,7 +319,7 @@ body {
     position: relative;
     justify-content: center;
     align-items: center;
-    top: 225px;
+    top: 25px;
     /* margin-top: 287px; */
 }
 
@@ -314,11 +328,17 @@ body {
 }
 
 .socials {
-    background-color: #222;
+    background-color: #000;
     display: flex;
     margin: 10px;
     border-radius: 10px;
     border: 3px solid #EEE;
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 1);
+    transition: all 0.5s ease-in;
+}
+
+.socials:hover {
+    box-shadow: 2px 2px 25px rgba(255, 255, 255, 1);
 }
 
 .fa-brands {
