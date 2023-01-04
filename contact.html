@@ -15,7 +15,7 @@
 
     <body class="cs50-background">
         <!-- Scroll Effect -->
-        <section class="hiddenTop">
+        <div class="hiddenTop">
 
             <!-- Navigation Bar Container-->
             <nav class="navBar">
@@ -38,15 +38,30 @@
                 <div class="search-container">
                     <form class="searchbar" action="https://www.google.com/search" method="get">
                         <input autocomplete="off" autofocus name="q" placeholder="Search">
-                        <button type="submit"><img class="searchimg" src="images/search.png"></button>
+                        <button type="submit"><img class="searchimg" src="images/search.png" alt="Search"></button>
                     </form>
                 </div>
             </nav>
             <!-- Page Title -->
             <h1 class="title">CONTACT</h1>
-        </section>
-
-
         </div>
+
+
+        <form class="contact-form">
+            <div class="input-group">
+                <input type="name" id="name" required>
+                <label for="name"><i class="fas fa-user"></i> Your Name</label>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" required>
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+            </div>
+            <div class="input-group">
+                <textarea type="message" rows="8" id="message" required></textarea>
+                <label for="message"><i class="fas fa-comments"></i> Message</label>
+            </div>
+            <button type="submit">Submit <i class="fas fa-paper-plane"></i></button>
+        </form>
+
     </body>
 </html>
